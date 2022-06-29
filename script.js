@@ -53,14 +53,18 @@ const button = document.getElementById("button");
 let real = undefined;
 
 button.addEventListener("click",function lo(){
+ 
+    {
     currentque++;
     if(currentque<quiz.length ){
         loadq();
     }
     else{
+ 
         html();
+        
     }
-    
+}
 });
 function radi(){
 const rad = document.getElementsByName("ok");
@@ -90,8 +94,11 @@ function co(){
     }  
 }
 function html(){
-        let ht = document.getElementById("quiz");
-        ht.innerHTMl = ("<h2>the score is $(score)</h2>");
-}
+    const after = document.getElementById("quiz");
+    after.innerHTML= ("Your score is "+ score);
+    after.style.textAlign = "center";
+    after.style.fontWeight = "bolder";
+    after.style.fontSize = "35px";   
 
+}
 
